@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Catering Service
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/drink.png" alt="catering-log">
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Categing Service</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Otra manera de gestionar un servicio tan importante como es el catering.
+    </ion-card-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div>
+      <h1>Descripcion: {{description}} </h1>
+      <p>Precio: {{price}} </p>
+    </div>
+
+    <ion-button (click)="goToMyMenu()" expand="block">Ir al menu</ion-button>
+
+  </ion-card>
 </ion-content>

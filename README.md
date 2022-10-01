@@ -24,11 +24,15 @@ Ionic, Angular, NodeJS
 ***
 Para poder arrancar el proyecto debes seguir los siguientes pasos:
 
+```
 $ git clone https://github.com/laura-santiago/delivery_frontend
 $ cd frontend
 $ npm install
 
-$ ionic serve https://documenter.getpostman.com/view/20375680/2s83tDoCSs
+$ ionic serve 
+```
+
+https://documenter.getpostman.com/view/20375680/2s83tDoCSs
 
 
 ## Collaboration

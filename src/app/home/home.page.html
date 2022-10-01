@@ -18,12 +18,17 @@
       Otra manera de gestionar un servicio tan importante como es el catering.
     </ion-card-content>
 
-    <div>
-      <h1>Descripcion: {{description}} </h1>
-      <p>Precio: {{price}} </p>
-    </div>
-
-    <ion-button (click)="goToMyMenu()" expand="block">Ir al menu</ion-button>
+      <ion-row> 
+        <ion-col width-33>
+          <ion-button (click)="goToMyList()" expand="block">Listado</ion-button>
+        </ion-col>
+        <ion-col width-33>
+          <ion-button (click)="goToCreate()" expand="block">Nuevo</ion-button>
+        </ion-col>
+        <ion-col width-33>
+          <ion-button (click)="goToStart()" expand="block">Salir</ion-button>
+        </ion-col>        
+    </ion-row>   
 
   </ion-card>
 </ion-content>

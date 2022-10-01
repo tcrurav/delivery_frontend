@@ -8,16 +8,28 @@ const routes: Routes = [
     pathMatch: 'full'
   },  
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: 'my-menu',
     loadChildren: () => import('./my-menu/my-menu.module').then( m => m.MyMenuPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./items/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./items/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'update',
+    loadChildren: () => import('./items/update/update.module').then( m => m.UpdatePageModule)
   },
 ];
 

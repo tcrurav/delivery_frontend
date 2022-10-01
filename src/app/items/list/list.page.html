@@ -1,0 +1,46 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Articulos del Catering</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card-header>
+    <img src="assets/cubiertos_sin_fondo.png" alt="catering-list">
+    <ion-card-subtitle>Y si no re gusta el mojo ...</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12"
+              *ngFor="let i of items;">
+
+        <ion-card>
+          <ion-card-content>
+            <h1>{{i.id}}. {{i.description}}  -  {{i.price}}€</h1>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-row> 
+            <ion-col width-50>
+              <ion-button type="ios" color="light"  (click)="deleteItem(i.id)" expand="block"> Elimina </ion-button>
+            </ion-col>
+            <ion-col width-50>
+              <ion-button type="ios" 
+                          color="medium" 
+                          expand="block"
+                          [routerLink]="['/update/']"
+                          [queryParams]="{ id: i.id }"> Actualiza </ion-button>  
+            </ion-col>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-button type="ios" (click)="goBack()">Volver</ion-button>  -->
+  <ion-button (click)="goBack()" expand="block">Volver</ion-button>
+
+
+</ion-content>

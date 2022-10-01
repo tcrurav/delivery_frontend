@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemService } from '../services/item.service';
 
 @Component({
   selector: 'app-my-menu',
@@ -8,17 +7,9 @@ import { ItemService } from '../services/item.service';
 })
 export class MyMenuPage implements OnInit {
 
-  items: any = [];
-
-  constructor( private itemService: ItemService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getAllItems();
   }
 
-  getAllItems() {
-    this.itemService.getItems().subscribe(response => {
-      this.items = response;
-    });
-  }
 }
